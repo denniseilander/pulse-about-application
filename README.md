@@ -7,6 +7,9 @@
 
 A Laravel Pulse card that displays application information by leveraging the output of the php artisan about command.
 
+<img width="939" alt="Laravel-Pulse-Applicaiton-Information-Card" src="https://github.com/denniseilander/pulse-about-application/assets/3907144/fdbef9fd-21fc-4f90-af74-5b4c136c7a4b">
+
+
 ## Installation
 
 You can install the package via composer:
