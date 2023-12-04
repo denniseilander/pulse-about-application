@@ -7,14 +7,6 @@
 
 A Laravel Pulse card that displays application information by leveraging the output of the php artisan about command.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/pulse-about-application.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/pulse-about-application)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
 ## Installation
 
 You can install the package via composer:
@@ -23,24 +15,10 @@ You can install the package via composer:
 composer require denniseilander/pulse-about-application
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="pulse-about-application-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="pulse-about-application-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
 ```
 
 Optionally, you can publish the views using
@@ -51,9 +29,13 @@ php artisan vendor:publish --tag="pulse-about-application-views"
 
 ## Usage
 
-```php
-$aboutApplication = new Denniseilander\AboutApplication();
-echo $aboutApplication->echoPhrase('Hello, Denniseilander!');
+In your dashboard.blade.php you can now add this card:
+
+```html
+<x-pulse>
+    ...
+    <livewire:pulse.about-application />
+</x-pulse>
 ```
 
 ## Testing
