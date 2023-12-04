@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Denniseilander\AboutApplication\Tests;
 
+use Denniseilander\AboutApplication\AboutApplicationServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Denniseilander\AboutApplication\AboutApplicationServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -21,7 +21,6 @@ class TestCase extends Orchestra
     }
 
     /**
-     * @param $app
      * @return array<array-key, class-string>
      */
     protected function getPackageProviders($app): array

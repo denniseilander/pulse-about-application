@@ -25,16 +25,16 @@ class AboutApplication
     }
 
     /**
-     * @param Collection<array-key, mixed> $information
+     * @param  Collection<array-key, mixed>  $information
      * @return Collection<array-key, mixed>
      */
     public static function formatInformation(Collection $information): Collection
     {
         return $information
-            ->reject(function (array $items, string $category){
+            ->reject(function (array $items, string $category) {
                 return in_array($category, config('pulse-about-application.hide', []), true);
             })
-            ->map(function (array $items, string $category){
+            ->map(function (array $items, string $category) {
                 return (new Collection($items))->transform(function (mixed $value, string $key) {
                     return match (true) {
                         is_bool($value) => $value === true ? 'Yes' : 'No',

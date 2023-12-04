@@ -8,8 +8,8 @@ use Denniseilander\AboutApplication\AboutApplication;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\View as ViewFacade;
 use Laravel\Pulse\Livewire\Card;
-use Laravel\Pulse\Livewire\Concerns\RemembersQueries;
 use Laravel\Pulse\Livewire\Concerns\HasPeriod;
+use Laravel\Pulse\Livewire\Concerns\RemembersQueries;
 use Livewire\Attributes\Lazy;
 
 #[Lazy]

@@ -10,6 +10,6 @@ return [
      */
     'hide' => [
         'environment',
-        'livewire'
+        'livewire',
     ],
 ];
