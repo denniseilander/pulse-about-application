@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace Denniseilander\AboutApplication\Tests;
 
 use Denniseilander\AboutApplication\AboutApplicationServiceProvider;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Denniseilander\AboutApplication\Livewire\AboutApplicationCard;
+use Livewire\Livewire;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -15,9 +16,7 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Denniseilander\\AboutApplication\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        $this->registerLivewireComponents();
     }
 
     /**
@@ -26,18 +25,13 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app): array
     {
         return [
-            AboutApplicationServiceProvider::class,
             LivewireServiceProvider::class,
+            AboutApplicationServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app): void
+    protected function registerLivewireComponents(): void
     {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_pulse-about-application_table.php.stub';
-        $migration->up();
-        */
+        Livewire::component('pulse.about-application', AboutApplicationCard::class);
     }
 }
