@@ -9,7 +9,9 @@ return [
      * Possible values are: "environment", "cache", "drivers", "livewire
      */
     'hide' => [
-        'environment',
-        'livewire',
+        // 'environment',
+        // 'cache',
+        // 'drivers',
+        // 'livewire',
     ],
 ];
