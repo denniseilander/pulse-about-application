@@ -39,8 +39,9 @@ class AboutApplication
                     return match (true) {
                         is_bool($value) => $value === true ? 'Yes' : 'No',
                         is_array($value) => implode(', ', $value),
-                        is_string($value) => $value,
-                        $value === '', $value === null => '-',
+                        is_int($value) => number_format($value),
+                        is_string($value) => blank($value) ? '-' : $value,
+                        default => (string) $value,
                     };
                 });
             });
