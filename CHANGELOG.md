@@ -2,6 +2,35 @@
 
 All notable changes to `pulse-about-application` will be documented in this file.
 
+## 1.0.0 - 2026-03-18
+
+Laravel 13 support and updated requirements.
+
+### Breaking changes
+
+- **PHP 8.3+ required** — PHP 8.1 and 8.2 are no longer supported
+- **Laravel 12+ required** — Laravel 10 and 11 are no longer supported (EOL)
+
+### What's new
+
+- **Laravel 13 support** — Compatible with Laravel 12 and 13
+- **PHP 8.4 & 8.5** — CI tests run on PHP 8.3, 8.4, and 8.5
+
+### Upgrade
+
+If you're on PHP 8.1/8.2 or Laravel 10/11, upgrade your environment first:
+
+```bash
+composer require denniseilander/pulse-about-application:^1.0
+
+```
+### Full changelog
+
+- Require PHP 8.3+ and Laravel 12+
+- Add Laravel 13 support (via laravel/pulse dev-1.x until stable release)
+- Simplify dev dependencies for Laravel 12/13 only
+- Fix Pest CI run with `--no-coverage`
+
 ## 0.3.0 - 2025-03-05
 
 ### What's Changed
